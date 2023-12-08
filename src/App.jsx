@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import RatingDemo from './RatingDemo'
 import FormDemo from './FormDemo'
+import Navbar from './Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
       <div>
         {/* <RatingDemo/> */}
+        <Navbar/>
         <FormDemo/>
       </div>
     </>

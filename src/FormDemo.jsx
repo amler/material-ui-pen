@@ -1,5 +1,6 @@
 import { TextField } from "@mui/material";
 import { useState } from "react";
+import {Box} from "@mui/material";
 
 export default function FormDemo () {
     const [name, setName] = useState('');
@@ -7,7 +8,12 @@ export default function FormDemo () {
         setName(e.target.value);
     }
     return (
-        <div>
+        <Box sx={{
+            border: '1px solid pink',
+            p: 4,
+            margin: '0 auto',
+            width: 900
+        }}>
             <p>Name is: {name}</p>
             <TextField 
                 id="outlined-basic" 
@@ -16,6 +22,6 @@ export default function FormDemo () {
                 placeholder="Jane"
                 value={name} 
                 variant="outlined" />
-        </div>
+        </Box>
     );
 }
