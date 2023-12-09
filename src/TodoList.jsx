@@ -6,7 +6,7 @@ import TodoForm from './TodoForm';
 const initialData = () =>  {
   const localData = JSON.parse(localStorage.getItem('todos'));
   if (!localData) return [];
-  return data;
+  return localData;
 }
 
 export default function TodoList () {
