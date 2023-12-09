@@ -7,12 +7,12 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export default function TodoItem ({todo}) {
+export default function TodoItem ({todo, removeTodo}) {
     
     return (
         <ListItem
           secondaryAction={
-            <IconButton edge="end" aria-label="comments">
+            <IconButton edge="end" aria-label="comments" onClick={removeTodo}>
               <DeleteIcon />
             </IconButton>
           }

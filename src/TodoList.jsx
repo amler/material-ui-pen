@@ -10,11 +10,15 @@ const dummyData = [
 
 export default function TodoList () {
   const [todos, setTodos] = useState(dummyData);
-  
+  const removeTodo = (id) => {
+    setTodos((prevTodos) => {
+      return prevTodos.filter((item) => item.id !== id);
+    });
+  };
   return (
     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} />
+        <TodoItem key={todo.id} todo={todo} removeTodo={() => removeTodo(todo.id)}/>
       ))}
     </List>
   );
